@@ -1,0 +1,19 @@
+import psutil
+from plyer import notification
+import time
+
+
+while (True):
+    battery = psutil.sensors_battery()
+    percent = battery.percent
+
+    notification.notify(
+        title="Pil Şarj durumu",
+        message=str(percent) + "% kullanılabilir dir",
+        timeout=10
+    )
+
+
+    time.sleep(50 * 50)
+
+    continue
